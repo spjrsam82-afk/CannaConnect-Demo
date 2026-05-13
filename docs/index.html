@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CannaConnect Facility Dashboard</title>
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --dark-bg: #1a1a1a;
+            --panel-bg: #2d2d2d;
+            --text-light: #f4f4f4;
+            --status-ok: #4caf50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--panel-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--status-ok);
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .metric {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .label {
+            color: #aaa;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>CannaConnect Infrastructure <span style="font-size: 16px; font-weight: normal;">| Facility Health Monitor</span></h1>
+    </div>
+
+    <div class="grid-container">
+        <!-- Connectivity Panel (Based on your Netgear/Samsung Optimization) -->
+        <div class="card">
+            <div class="label">Network Connectivity</div>
+            <div class="metric"><span class="status-indicator"></span>Mesh Active</div>
+            <p>Signal Strength: -45 dBm (Excellent)</p>
+            <p style="font-size: 12px; color: #888;">Hardware: Netgear EAX20 Optimized</p>
+        </div>
+
+        <!-- Utility Load (Based on your Utilities Foreman Experience) -->
+        <div class="card">
+            <div class="label">Infrastructure Load</div>
+            <div class="metric">12.4 kW</div>
+            <p>HVAC Systems: Normal</p>
+            <p>Irrigation Pumps: Standby</p>
+        </div>
+
+        <!-- Security Status -->
+        <div class="card">
+            <div class="label">Cybersecurity Perimeter</div>
+            <div class="metric">SECURE</div>
+            <p>Firewall: Active</p>
+            <p>Encrypted Data Stream: Yes</p>
+        </div>
+    </div>
+
+</body>
+</html>
